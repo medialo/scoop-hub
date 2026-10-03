@@ -1,42 +1,51 @@
-# Scoop Bucket Template
+# scoop-hub
 
-<!-- Uncomment the following line after replacing placeholders -->
-<!-- [![Tests](https://github.com/<username>/<bucketname>/actions/workflows/ci.yml/badge.svg)](https://github.com/<username>/<bucketname>/actions/workflows/ci.yml) [![Excavator](https://github.com/<username>/<bucketname>/actions/workflows/excavator.yml/badge.svg)](https://github.com/<username>/<bucketname>/actions/workflows/excavator.yml) -->
+**H**osted **U**tility **B**ucket, or in other words: another [Scoop](https://scoop.sh) bucket.
 
-Template bucket for [Scoop](https://scoop.sh), the Windows command-line installer.
+A single place to install the command-line tools I build on Windows.
 
-## How do I use this template?
+## Getting started
 
-1. Generate your own copy of this repository with the "Use this template"
-   button.
-2. Allow all GitHub Actions:
-   - Navigate to `Settings` - `Actions` - `General` - `Actions permissions`.
-   - Select `Allow all actions and reusable workflows`.
-   - Then `Save`.
-3. Workflow permissions:
-   - Navigate to `Settings` - `Actions` - `General` - `Workflow permissions`.
-   - Ensure `Read repository contents and packages permissions` is selected.
-   - Then `Save`.
-4. Document the bucket in `README.md`.
-5. Replace the placeholder repository string in `bin/auto-pr.ps1`.
-6. Create new manifests by copying `bucket/app-name.json.template` to
-   `bucket/<app-name>.json`.
-7. Commit and push changes.
-8. If you'd like your bucket to be indexed on `https://scoop.sh`, add the
-   topic `scoop-bucket` to your repository.
-
-## How do I install these manifests?
-
-After manifests have been committed and pushed, run the following:
+Install [Scoop](https://scoop.sh) if you don't have it yet:
 
 ```pwsh
-scoop bucket add <bucketname> https://github.com/<username>/<bucketname>
-scoop install <bucketname>/<manifestname>
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 ```
 
-## How do I contribute new manifests?
+Add the bucket:
 
-To make a new manifest contribution, please read the [Contributing
-Guide](https://github.com/ScoopInstaller/.github/blob/main/.github/CONTRIBUTING.md)
-and [App Manifests](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifests)
-wiki page.
+```pwsh
+scoop bucket add hub https://github.com/medialo/scoop-hub
+```
+
+Install an app:
+
+```pwsh
+scoop install hub/gogws
+```
+
+## Apps
+
+| App | Version | Description | Platforms | License | Manifest |
+| --- | --- | --- | --- | --- | --- |
+| [gogws](https://github.com/medialo/gogws) | [![gogws](https://img.shields.io/scoop/v/gogws?bucket=https://github.com/medialo/scoop-hub&label=)](https://github.com/medialo/gogws/releases/latest) | Manage a folder full of Git repositories as one workspace: status, fetch, pull and clone them all in parallel. | x64, arm64 | [AGPL-3.0](https://github.com/medialo/gogws/blob/master/LICENSE) | [gogws.json](https://github.com/medialo/scoop-hub/blob/master/bucket/gogws.json) |
+
+## Updating
+
+```pwsh
+scoop update            # refresh Scoop and every bucket
+scoop update gogws      # update one app
+scoop update *          # update every installed app
+```
+
+## Uninstalling
+
+```pwsh
+scoop uninstall gogws
+scoop bucket rm hub
+```
+
+## Issues
+
+Problems with an app belong in that app's repository. Open an issue here only for problems with the bucket or a manifest itself.
