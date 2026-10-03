@@ -17,7 +17,7 @@
         }
     },
     "homepage": "https://github.com/medialo/gogws",
-    "description": "Software to create fast and easy drum rolls.",
+    "description": "Manage a folder full of Git repositories as one workspace: status, fetch, pull and clone them all in parallel.",
     "depends": [
         "git"
     ],
