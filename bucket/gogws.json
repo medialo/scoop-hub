@@ -1,0 +1,30 @@
+{
+    "version": "0.1.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/medialo/gogws/releases/download/v0.1.0/gogws_0.1.0_windows_amd64.zip",
+            "bin": [
+                "gogws.exe"
+            ],
+            "hash": "86651fa6af64f93e73994e087fb6e5aab97be074e35347e773b43a40ee11654a"
+        },
+        "arm64": {
+            "url": "https://github.com/medialo/gogws/releases/download/v0.1.0/gogws_0.1.0_windows_arm64.zip",
+            "bin": [
+                "gogws.exe"
+            ],
+            "hash": "64bccd95393116f955ab0ab676ea433f3c8157679d8cc0db99172d6a67734dfa"
+        }
+    },
+    "homepage": "https://github.com/medialo/gogws",
+    "description": "Software to create fast and easy drum rolls.",
+    "depends": [
+        "git"
+    ],
+    "shortcuts": [
+        [
+            "gogws.exe",
+            "gogws"
+        ]
+    ]
+}
