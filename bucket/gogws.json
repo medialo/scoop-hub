@@ -1,19 +1,19 @@
 {
-    "version": "0.2.0",
+    "version": "0.3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/medialo/gogws/releases/download/v0.2.0/gogws_0.2.0_windows_amd64.zip",
+            "url": "https://github.com/medialo/gogws/releases/download/v0.3.0/gogws_0.3.0_windows_amd64.zip",
             "bin": [
                 "gogws.exe"
             ],
-            "hash": "2d4123ebea025928e4520245eb153469ed694a2698f9b9c4cf5fcf53e250ff71"
+            "hash": "f3d0d7988c1c123c56a2b516282276489b78895a71a4ed856d1542f49654b183"
         },
         "arm64": {
-            "url": "https://github.com/medialo/gogws/releases/download/v0.2.0/gogws_0.2.0_windows_arm64.zip",
+            "url": "https://github.com/medialo/gogws/releases/download/v0.3.0/gogws_0.3.0_windows_arm64.zip",
             "bin": [
                 "gogws.exe"
             ],
-            "hash": "5fce59efe1a027432aecded8199825c4305d2cb0a0526bbdc52ea4d078ff5f07"
+            "hash": "acdeff7195b194a1de63bf42ad3094125d403742d69e3fcce752fbc1bfe23349"
         }
     },
     "homepage": "https://github.com/medialo/gogws",
